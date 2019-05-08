@@ -46,13 +46,17 @@
       $pw = md5(md5($_POST['email']).$_POST['password']);
 
       // ユーザーがあるかどうかチェックする
-      $query = "SELECT id
+      $query = "SELECT `id`, `username`
             FROM `users` 
             WHERE email='".mysqli_real_escape_string($link, $_POST['email'])."'
                 AND password='".mysqli_real_escape_string($link, $pw)."'";
       $result = mysqli_query($link, $query);
 
       if ($row = mysqli_fetch_array($result)) {
+
+
+        // ユーザー名の保存
+        $username = isset($row['username']) ? $row['username'] : "Noname";
 
 
         // tokenを発行する
@@ -70,6 +74,7 @@
           // cookieの設定
           setcookie('token', $token, time()+60*60*24);
           setcookie('email', mysqli_real_escape_string($link, $_POST['email']), time()+60*60*24*30);
+          setcookie('username', $username, time()+60*60*24*30);
 
 
           // index.phpに遷移する

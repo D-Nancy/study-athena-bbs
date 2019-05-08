@@ -68,6 +68,7 @@ if (isset($_COOKIE['token'])) {
           // cookieの設定
           setcookie('token', $token, time()+60*60*24);
           setcookie('email', mysqli_real_escape_string($link, $_POST['email']), time()+60*60*24*30);
+          setcookie('username', "Noname", time()+60*60*24*30);
 
 
           // index.phpに遷移する
