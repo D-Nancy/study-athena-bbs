@@ -1,0 +1,252 @@
+/********************
+*
+* global
+*
+********************/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+button,
+input[type="button"] {
+  cursor: pointer;
+}
+
+
+
+
+/**********
+*
+* fonts
+*
+**********/
+
+h1 {
+  font-size: 32px;
+  color: #484848;
+}
+
+h2 {
+  margin-bottom: 24px;
+  font-size: 28px;
+  color: #646464;
+}
+
+a {
+  text-decoration: none;
+}
+
+label {
+  font-size: 20px;
+  color: #888;
+}
+
+input,
+textarea {
+  padding: 4px 8px;
+  font-size: 16px;
+  color: #727272;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+input[type="button"],
+input[type="submit"] {
+  width: 160px;
+  padding: 6px 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  background-color: #004DE6;
+}
+
+
+
+
+/**********
+*
+* form
+*
+**********/
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+form label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 8px;
+}
+
+form label input {
+  margin-top: 4px;
+}
+
+input[type="button"],
+input[type="submit"]  {
+  margin-top: 16px;
+}
+
+
+
+
+/**********
+*
+* article
+*
+**********/
+
+article {
+
+}
+
+article > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+article > div > h3 {
+  width: 80px;
+}
+
+
+
+
+/**********
+*
+* list
+*
+**********/
+
+ul,
+ol {
+  list-style: none;
+}
+
+li {
+  margin-bottom: 40px;
+}
+
+li input[type="submit"] {
+  width: auto;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 400;
+  color: #aaa;
+  background-color: transparent;
+  border-radius: 99px;
+}
+
+
+/**********
+*
+* header
+*
+**********/
+
+header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 8px 24px;
+}
+
+header > nav a {
+  margin-right: 8px;
+  padding: 4px 8px;
+  font-weight: 700;
+  color: #444;
+}
+
+header > nav a:hover {
+  background-color: #ddd;
+}
+
+header > nav input[type="submit"] {
+  width: auto;
+  margin: auto;
+  padding: 4px 8px;
+  font-weight: 700;
+  color: #444;
+  background-color: transparent;
+  border: none;
+}
+
+header > nav input[type="submit"]:hover {
+  background-color: #ddd;
+}
+
+
+
+/**********
+*
+* main
+*
+**********/
+
+main {
+  margin-top: 80px;
+  padding: 0 24px 120px;
+}
+
+
+
+
+/********************
+*
+* index.php
+*
+********************/
+/**********
+*
+* bbs
+*
+**********/
+
+.bbs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bbs ul {
+  width: 60vw;
+}
+
+.bbs > form {
+  position: fixed;
+  top: 160px;
+  right: 24px;
+  width: 32vw;
+}
+
+.bbs > form label {
+  width: 100%;
+}
+
+.bbs > form label textarea {
+  height: 160px;
+  resize: none;
+}
+
+
+
+
+
+
+
+
